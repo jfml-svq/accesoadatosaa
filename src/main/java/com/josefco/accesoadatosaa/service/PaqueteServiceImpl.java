@@ -3,7 +3,9 @@ package com.josefco.accesoadatosaa.service;
 
 import com.josefco.accesoadatosaa.domain.Paquete;
 import com.josefco.accesoadatosaa.exception.PaqueteNoEncontradoException;
+import com.josefco.accesoadatosaa.repository.ConductorRepository;
 import com.josefco.accesoadatosaa.repository.PaqueteRepository;
+import com.josefco.accesoadatosaa.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,10 @@ public class PaqueteServiceImpl implements PaqueteService {
 
     @Autowired
     private PaqueteRepository paqueteRepository;
+    @Autowired
+    private UsuarioRepository usuarioRepository;
+    @Autowired
+    private ConductorRepository conductorRepository;
 
     @Override
     public List<Paquete> findAllPaquetes() {
@@ -30,6 +36,7 @@ public class PaqueteServiceImpl implements PaqueteService {
     public Paquete addPaquete(Paquete Paquete) {
         return paqueteRepository.save(Paquete);
     }
+
 
     @Override
     public Paquete deletePaquete(int id) throws PaqueteNoEncontradoException {
