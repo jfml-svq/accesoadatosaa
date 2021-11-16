@@ -39,20 +39,20 @@ public class CamionServiceImpl implements CamionService {
 
     @Override
     public Camion deleteCamion(int id) throws CamionNoEncontradoException {
-        Camion Camion = camionRepository.findById(id);
-        camionRepository.delete(Camion);
-        return Camion;
+        Camion camion = camionRepository.findById(id);
+        camionRepository.delete(camion);
+        return camion;
     }
 
     @Override
     public Camion modifyCamion(int id, Camion newCamion) throws CamionNoEncontradoException {
-        Camion Camion = camionRepository.findById(id);
+        Camion camion = camionRepository.findById(id);
 
-        Camion.setGasolina(newCamion.getGasolina());
-        Camion.setMarca(newCamion.getMarca());
-        Camion.setModelo(newCamion.getModelo());
-        Camion.setMatricula(newCamion.getMatricula());
+        camion.setGasolina(newCamion.getGasolina());
+        camion.setMarca(newCamion.getMarca());
+        camion.setModelo(newCamion.getModelo());
+        camion.setMatricula(newCamion.getMatricula());
 
-        return camionRepository.save(Camion);
+        return camionRepository.save(camion);
     }
 }

@@ -5,7 +5,6 @@ import com.josefco.accesoadatosaa.domain.Camion;
 import com.josefco.accesoadatosaa.exception.CamionNoEncontradoException;
 import com.josefco.accesoadatosaa.exception.RespuestaError;
 import com.josefco.accesoadatosaa.service.CamionService;
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,7 +25,7 @@ public class CamionController {
     }
 
     @GetMapping("/camion/{id}")
-    public Camion getCamion(@PathVariable int id) throws CamionNoEncontradoException {
+    public Camion findCamion(@PathVariable int id) throws CamionNoEncontradoException {
         Camion Camion = camionService.findCamion(id);
         return Camion;
     }
