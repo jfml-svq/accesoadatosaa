@@ -14,7 +14,7 @@ public class Camion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idCamion;
+    private int id;
     @Column
     private String matricula;
     @Column

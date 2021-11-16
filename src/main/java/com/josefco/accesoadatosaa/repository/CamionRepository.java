@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface CamionRepository extends CrudRepository<Camion, Long> {
 
-    List<Camion> encontrarCamiones();
-    void encontrarCamionPorId(int id);
+    List<Camion> findAll();
+    Camion findById(int id);
 }
