@@ -1,4 +1,16 @@
 package com.josefco.accesoadatosaa.service;
 
-public class ConductorService {
+import com.josefco.accesoadatosaa.domain.Conductor;
+import com.josefco.accesoadatosaa.exception.ConductorNoEncontradoException;
+
+import java.util.List;
+
+public interface ConductorService {
+
+    List<Conductor> findAllConductores();
+    Conductor findConductor(int id) throws ConductorNoEncontradoException;
+
+    Conductor addConductor (Conductor Conductor);
+    Conductor deleteConductor (int id) throws  ConductorNoEncontradoException;
+    Conductor modifyConductor (int id, Conductor Conductor) throws ConductorNoEncontradoException;
 }

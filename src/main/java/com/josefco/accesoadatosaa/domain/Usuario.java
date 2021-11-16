@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -26,4 +27,7 @@ public class Usuario {
     /*@Column(name = "fecha_registro")
     @JsonFormat(pattern = "dd-MM-yyyy")
     private LocalDate fechaRegistro;*/
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Paquete> paquete;
 }

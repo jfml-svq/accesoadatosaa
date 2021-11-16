@@ -1,4 +1,16 @@
 package com.josefco.accesoadatosaa.repository;
 
-public class PaqueteRepository {
+
+import com.josefco.accesoadatosaa.domain.Paquete;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface PaqueteRepository extends CrudRepository<Paquete, Long> {
+
+    List<Paquete> findAll();
+    Paquete findById(int id);
+
 }

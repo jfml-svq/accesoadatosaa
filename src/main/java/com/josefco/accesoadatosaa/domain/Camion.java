@@ -23,4 +23,7 @@ public class Camion {
     private String marca;
     @Column
     private int gasolina;
+
+    @OneToOne(mappedBy = "camion")
+    private Conductor conductor;
 }
