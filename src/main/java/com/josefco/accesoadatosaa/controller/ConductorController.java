@@ -46,6 +46,11 @@ public class ConductorController {
         return newConductor;
     }
 
+    @RequestMapping(value = "/conductores/direccion/{direccion}")
+    public List<Conductor> findConductorByDireccion(@PathVariable String direccion) throws ConductorNoEncontradoException{
+        return conductorService.findConductorByDireccion(direccion);
+    }
+
     @ExceptionHandler(ConductorNoEncontradoException.class)
     public ResponseEntity<RespuestaError> handleConductorNoEncontradoException(ConductorNoEncontradoException cnee) {
         RespuestaError errorResponse = new RespuestaError("1", cnee.getMessage());

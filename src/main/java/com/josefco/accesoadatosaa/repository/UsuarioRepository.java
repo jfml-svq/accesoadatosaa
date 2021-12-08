@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UsuarioRepository extends CrudRepository<Usuario, Long> {
+public interface UsuarioRepository extends CrudRepository<Usuario, Integer> {
 
     List<Usuario> findAll();
     Usuario findById(int id);

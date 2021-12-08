@@ -1,5 +1,6 @@
 package com.josefco.accesoadatosaa.controller;
 
+import com.josefco.accesoadatosaa.domain.PaquetDTO;
 import com.josefco.accesoadatosaa.domain.Paquete;
 import com.josefco.accesoadatosaa.exception.PaqueteNoEncontradoException;
 import com.josefco.accesoadatosaa.exception.RespuestaError;
@@ -35,10 +36,15 @@ public class PaqueteController {
         return Paquete;
     }
 
-    @PostMapping("/paquetes")
-    public Paquete addPaquete(@RequestBody Paquete Paquete) {
-        Paquete newPaquete = paqueteService.addPaquete(Paquete);
+    /*@PostMapping("/paquetes")
+    public Paquete addPaquete(@RequestBody Paquete paquete) {
+        Paquete newPaquete = paqueteService.addPaquete(paquete);
         return newPaquete;
+    }*/
+
+    @PostMapping("/paquete")
+    public Paquete addPaquete(@RequestBody PaquetDTO paquetDTO) throws Exception {
+        return paqueteService.addPaquete(paquetDTO);
     }
 
     @PutMapping("/paquete/{id}")

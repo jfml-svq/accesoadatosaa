@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface CamionRepository extends CrudRepository<Camion, Long> {
+public interface CamionRepository extends CrudRepository<Camion, Integer> {
 
     List<Camion> findAll();
     Camion findById(int id);

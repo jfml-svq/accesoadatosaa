@@ -1,11 +1,15 @@
 package com.josefco.accesoadatosaa.service;
 
 
+import com.josefco.accesoadatosaa.domain.Conductor;
+import com.josefco.accesoadatosaa.domain.PaquetDTO;
 import com.josefco.accesoadatosaa.domain.Paquete;
+import com.josefco.accesoadatosaa.domain.Usuario;
 import com.josefco.accesoadatosaa.exception.PaqueteNoEncontradoException;
 import com.josefco.accesoadatosaa.repository.ConductorRepository;
 import com.josefco.accesoadatosaa.repository.PaqueteRepository;
 import com.josefco.accesoadatosaa.repository.UsuarioRepository;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,9 +37,22 @@ public class PaqueteServiceImpl implements PaqueteService {
     }
 
     @Override
-    public Paquete addPaquete(Paquete Paquete) {
-        return paqueteRepository.save(Paquete);
+    public Paquete addPaquete(PaquetDTO paquetDTO) throws Exception {
+
+        Usuario usuario = usuarioRepository.findById(paquetDTO.getUsuario());
+        Conductor conductor = conductorRepository.findById(paquetDTO.getConductor());
+
+        ModelMapper mapper = new ModelMapper();
+        Paquete paquete = mapper.map(paquetDTO, Paquete.class);
+        paquete.setUsuario(usuario);
+        paquete.setConductor(conductor);
+        return paqueteRepository.save(paquete);
     }
+
+    /*@Override
+    public Paquete addPaquete(Paquete paquete) {
+        return paqueteRepository.save(paquete);
+    }*/
 
 
     @Override

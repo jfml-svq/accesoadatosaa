@@ -47,4 +47,9 @@ public class ConductorServiceImpl implements ConductorService {
 
         return conductorRepository.save(conductor);
     }
+
+    @Override
+    public List<Conductor> findConductorByDireccion(String direccion) throws ConductorNoEncontradoException {
+        return conductorRepository.findConductorByDireccion(direccion);
+    }
 }

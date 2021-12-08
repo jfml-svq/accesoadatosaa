@@ -3,8 +3,10 @@ package com.josefco.accesoadatosaa.service;
 
 
 import com.josefco.accesoadatosaa.domain.Camion;
+import com.josefco.accesoadatosaa.domain.Conductor;
 import com.josefco.accesoadatosaa.exception.CamionNoEncontradoException;
 import com.josefco.accesoadatosaa.repository.CamionRepository;
+import com.josefco.accesoadatosaa.repository.ConductorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +17,8 @@ public class CamionServiceImpl implements CamionService {
 
     @Autowired
     private CamionRepository camionRepository;
+    @Autowired
+    private ConductorRepository conductorRepository;
 
     @Override
     public List<Camion> findAllCamiones() {
@@ -24,7 +28,7 @@ public class CamionServiceImpl implements CamionService {
 
     @Override
     public Camion findCamion(int id) throws CamionNoEncontradoException {
-        return camionRepository.findById(id);
+            return camionRepository.findById(id);
     }
 
     @Override
@@ -33,8 +37,8 @@ public class CamionServiceImpl implements CamionService {
     }
 
     @Override
-    public Camion addCamion(Camion Camion) {
-        return camionRepository.save(Camion);
+    public Camion addCamion(Camion camion) {
+            return camionRepository.save(camion);
     }
 
     @Override

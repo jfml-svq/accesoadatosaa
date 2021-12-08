@@ -26,4 +26,5 @@ public class Camion {
 
     @OneToOne(mappedBy = "camion")
     private Conductor conductor;
+
 }

@@ -37,8 +37,8 @@ public class CamionController {
     }
 
     @PostMapping("/camiones")
-    public Camion addCamion(@RequestBody Camion Camion) {
-        Camion newCamion = camionService.addCamion(Camion);
+    public Camion addCamion(@RequestBody Camion camion) {
+        Camion newCamion = camionService.addCamion(camion);
         return newCamion;
     }
 

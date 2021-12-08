@@ -1,5 +1,6 @@
 package com.josefco.accesoadatosaa.service;
 
+import com.josefco.accesoadatosaa.domain.PaquetDTO;
 import com.josefco.accesoadatosaa.domain.Paquete;
 import com.josefco.accesoadatosaa.exception.PaqueteNoEncontradoException;
 
@@ -11,7 +12,7 @@ public interface PaqueteService {
     List<Paquete> findAllPaquetes();
     Paquete findPaquete(int id) throws PaqueteNoEncontradoException;
 
-    Paquete addPaquete(Paquete paquete);
+    Paquete addPaquete(PaquetDTO paquetDTO) throws Exception /*throws UsuarioNoEncontradoException, ConductorNoEncontradoException*/;
     Paquete deletePaquete(int id) throws PaqueteNoEncontradoException;
     Paquete modifyPaquete(int id, Paquete Paquete) throws PaqueteNoEncontradoException;
 }

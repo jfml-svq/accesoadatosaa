@@ -13,4 +13,6 @@ public interface ConductorService {
     Conductor addConductor (Conductor Conductor);
     Conductor deleteConductor (int id) throws  ConductorNoEncontradoException;
     Conductor modifyConductor (int id, Conductor Conductor) throws ConductorNoEncontradoException;
+
+    List<Conductor> findConductorByDireccion(String direccion) throws ConductorNoEncontradoException;
 }
