@@ -28,8 +28,7 @@ public class ConductorController {
 
     @GetMapping("/conductor/{id}")
     public Conductor findConductor(@PathVariable int id) throws ConductorNoEncontradoException {
-        Conductor Conductor = conductorService.findConductor(id);
-        return Conductor;
+        return conductorService.findConductor(id);
     }
 
     @DeleteMapping("/conductor/{id}")
@@ -39,17 +38,18 @@ public class ConductorController {
     }
 
     @PostMapping("/conductores")
-    public Conductor addConductor(@RequestBody Conductor Conductor) {
-        Conductor newConductor = conductorService.addConductor(Conductor);
-        return Conductor;
+    public Conductor saveCondutor(@RequestBody Conductor conductor) {
+        Conductor newConductor = conductorService.saveConductor(conductor);
+        return newConductor;
     }
 
     @PutMapping("/conductor/{id}")
     public Conductor modifyConductor(@RequestBody Conductor Conductor, @PathVariable int id) throws ConductorNoEncontradoException {
         Conductor newConductor = conductorService.modifyConductor(id, Conductor);
-
         return newConductor;
     }
+
+
     @RequestMapping(value = "/conductores/direccion/{direccion}")
     public List<Conductor> findConductorByDireccion(@PathVariable String direccion) throws ConductorNoEncontradoException{
         logger.info("begin findConductorByDireccion");

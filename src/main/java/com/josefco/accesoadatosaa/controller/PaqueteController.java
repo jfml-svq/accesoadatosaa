@@ -36,11 +36,6 @@ public class PaqueteController {
         return Paquete;
     }
 
-    /*@PostMapping("/paquetes")
-    public Paquete addPaquete(@RequestBody Paquete paquete) {
-        Paquete newPaquete = paqueteService.addPaquete(paquete);
-        return newPaquete;
-    }*/
 
     @PostMapping("/paquete")
     public Paquete addPaquete(@RequestBody PaquetDTO paquetDTO) throws Exception {

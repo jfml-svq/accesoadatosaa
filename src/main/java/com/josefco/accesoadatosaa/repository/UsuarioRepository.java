@@ -10,5 +10,5 @@ import java.util.List;
 public interface UsuarioRepository extends CrudRepository<Usuario, Integer> {
 
     List<Usuario> findAll();
-    Usuario findById(int id);
+    //Usuario findById(int id);
 }

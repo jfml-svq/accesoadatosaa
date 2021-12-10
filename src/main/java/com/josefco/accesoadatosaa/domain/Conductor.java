@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -26,14 +27,29 @@ public class Conductor {
     @Column
     private String direccion;
 
-    @OneToOne
+    /*@OneToOne
     @JoinColumn(name = "id_camion")
     @JsonBackReference(value = "conductor-camion")
-    private Camion camion;
+    private Camion camion;*/
 
 
     @OneToMany(mappedBy = "conductor")
     private List<Paquete> paquetes;
 
 
+    @JsonBackReference
+    @ManyToMany(mappedBy="conductores")
+    private List<Camion> camiones=new ArrayList<>();
+
+    public Conductor(List<Camion> camiones) {
+        this.camiones = camiones;
+    }
+
+    /*public List<Camion> getCamiones() {
+        return camiones;
+    }
+
+    public void setCamiones(List<Camion> camiones) {
+        this.camiones = camiones;
+    }*/
 }

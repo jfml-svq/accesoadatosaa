@@ -12,7 +12,7 @@ public interface PaqueteService {
     List<Paquete> findAllPaquetes();
     Paquete findPaquete(int id) throws PaqueteNoEncontradoException;
 
-    Paquete addPaquete(PaquetDTO paquetDTO) throws Exception /*throws UsuarioNoEncontradoException, ConductorNoEncontradoException*/;
+    Paquete addPaquete(PaquetDTO paquetDTO) throws Exception;
     Paquete deletePaquete(int id) throws PaqueteNoEncontradoException;
     Paquete modifyPaquete(int id, Paquete Paquete) throws PaqueteNoEncontradoException;
 }

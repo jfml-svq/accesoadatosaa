@@ -9,9 +9,8 @@ public interface CamionService {
 
     List<Camion> findAllCamiones();
     Camion findCamion(int id) throws CamionNoEncontradoException;
-    void repairCamion(Camion Camion);
-
-    Camion addCamion(Camion camion);
     Camion deleteCamion(int id) throws CamionNoEncontradoException;
     Camion modifyCamion(int id, Camion Camion) throws CamionNoEncontradoException;
+
+    Camion saveCamion(Camion camion);
 }

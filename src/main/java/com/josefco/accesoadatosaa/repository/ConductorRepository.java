@@ -10,6 +10,6 @@ import java.util.List;
 public interface ConductorRepository extends CrudRepository<Conductor, Integer> {
 
     List<Conductor> findAll();
-    Conductor findById(int id);
+    //Conductor findById(int id);
     List<Conductor> findConductorByDireccion(String direccion);
 }

@@ -33,14 +33,14 @@ public class PaqueteServiceImpl implements PaqueteService {
 
     @Override
     public Paquete findPaquete(int id) throws PaqueteNoEncontradoException {
-        return paqueteRepository.findById(id);
+        return paqueteRepository.findById(id).orElseThrow(PaqueteNoEncontradoException::new);
     }
 
     @Override
     public Paquete addPaquete(PaquetDTO paquetDTO) throws Exception {
 
-        Usuario usuario = usuarioRepository.findById(paquetDTO.getUsuario());
-        Conductor conductor = conductorRepository.findById(paquetDTO.getConductor());
+        Usuario usuario = usuarioRepository.findById(paquetDTO.getUsuario()).orElseThrow();
+        Conductor conductor = conductorRepository.findById(paquetDTO.getConductor()).orElseThrow();
 
         ModelMapper mapper = new ModelMapper();
         Paquete paquete = mapper.map(paquetDTO, Paquete.class);
@@ -49,22 +49,17 @@ public class PaqueteServiceImpl implements PaqueteService {
         return paqueteRepository.save(paquete);
     }
 
-    /*@Override
-    public Paquete addPaquete(Paquete paquete) {
-        return paqueteRepository.save(paquete);
-    }*/
-
 
     @Override
     public Paquete deletePaquete(int id) throws PaqueteNoEncontradoException {
-        Paquete paquete = paqueteRepository.findById(id);
+        Paquete paquete = paqueteRepository.findById(id).orElseThrow(PaqueteNoEncontradoException::new);
         paqueteRepository.delete(paquete);
         return paquete;
     }
 
     @Override
     public Paquete modifyPaquete(int id, Paquete newPaquete) throws PaqueteNoEncontradoException {
-        Paquete paquete = paqueteRepository.findById(id);
+        Paquete paquete = paqueteRepository.findById(id).orElseThrow(PaqueteNoEncontradoException::new);
 
         paquete.setAlto(newPaquete.getAlto());
         paquete.setAncho(newPaquete.getAncho());

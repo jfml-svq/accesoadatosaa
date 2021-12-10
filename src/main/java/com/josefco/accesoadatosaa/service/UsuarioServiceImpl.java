@@ -22,7 +22,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario findUsuario(int id) throws UsuarioNoEncontradoException {
-        return usuarioRepository.findById(id);
+        return usuarioRepository.findById(id).orElseThrow(UsuarioNoEncontradoException::new);
     }
 
 
@@ -33,14 +33,14 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public Usuario deleteUsuario(int id) throws UsuarioNoEncontradoException {
-        Usuario usuario = usuarioRepository.findById(id);
+        Usuario usuario = usuarioRepository.findById(id).orElseThrow(UsuarioNoEncontradoException::new);
         usuarioRepository.delete(usuario);
         return usuario;
     }
 
     @Override
     public Usuario modifyUsuario(int id, Usuario newUsuario) throws UsuarioNoEncontradoException {
-        Usuario usuario = usuarioRepository.findById(id);
+        Usuario usuario = usuarioRepository.findById(id).orElseThrow(UsuarioNoEncontradoException::new);
 
         usuario.setNombre(newUsuario.getNombre());
         usuario.setApellido(newUsuario.getApellido());

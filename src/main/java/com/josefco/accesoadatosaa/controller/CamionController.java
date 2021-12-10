@@ -36,15 +36,15 @@ public class CamionController {
         return Camion;
     }
 
-    @PostMapping("/camiones")
-    public Camion addCamion(@RequestBody Camion camion) {
-        Camion newCamion = camionService.addCamion(camion);
-        return newCamion;
-    }
-
     @PutMapping("/camion/{id}")
     public Camion modifyCamion(@RequestBody Camion Camion, @PathVariable int id) throws CamionNoEncontradoException {
         Camion newCamion = camionService.modifyCamion(id, Camion);
+        return newCamion;
+    }
+
+    @PostMapping("/camiones")
+    public Camion saveCamion(@RequestBody Camion camion) {
+        Camion newCamion = camionService.saveCamion(camion);
         return newCamion;
     }
 

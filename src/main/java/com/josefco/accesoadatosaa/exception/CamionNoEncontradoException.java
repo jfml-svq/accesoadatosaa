@@ -11,4 +11,6 @@ public class CamionNoEncontradoException extends Exception{
 
     public CamionNoEncontradoException() { super(DEFAULT_ERROR_MESSAGE);}
 
+
+
 }
