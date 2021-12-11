@@ -23,29 +23,42 @@ public class ConductorController {
 
     @GetMapping("/conductores")
     public List<Conductor> findAllConductores() {
-        return conductorService.findAllConductores();
+        logger.info("begin findAllConductores");
+        List<Conductor> conductores;
+        conductores = conductorService.findAllConductores();
+        logger.info("end findAllConductores");
+        return conductores;
     }
 
     @GetMapping("/conductor/{id}")
     public Conductor findConductor(@PathVariable int id) throws ConductorNoEncontradoException {
-        return conductorService.findConductor(id);
+        logger.info("begin findConductor by id: "+id);
+        Conductor conductor = conductorService.findConductor(id);
+        logger.info("end findConductor by id: "+id);
+        return conductor;
     }
 
     @DeleteMapping("/conductor/{id}")
     public Conductor removeConductor(@PathVariable int id) throws ConductorNoEncontradoException {
+        logger.info("begin removeConductor by id: "+id);
         Conductor Conductor = conductorService.deleteConductor(id);
+        logger.info("end removeConductor by id: "+id);
         return Conductor;
     }
 
     @PostMapping("/conductores")
     public Conductor saveCondutor(@RequestBody Conductor conductor) {
+        logger.info("begin saveCondutor");
         Conductor newConductor = conductorService.saveConductor(conductor);
+        logger.info("begin saveCondutor");
         return newConductor;
     }
 
     @PutMapping("/conductor/{id}")
     public Conductor modifyConductor(@RequestBody Conductor Conductor, @PathVariable int id) throws ConductorNoEncontradoException {
+        logger.info("begin modifyConductor id: "+id);
         Conductor newConductor = conductorService.modifyConductor(id, Conductor);
+        logger.info("begin modifyConductor id: "+ id);
         return newConductor;
     }
 
