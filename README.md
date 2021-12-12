@@ -19,8 +19,8 @@ Creacion del para una api de paqueteria.
 - La segunda relacion surge de la clase **paquete**. Un paquete puede ser entregado por un conductor, y un conductor puede entregar 
   muchos paquetes. El usuario tiene la misma relacion, puede recibir muchos paquetes y un paquete solo puede ser recibido por un usuario. *(OneToMany)*
   
-  ## Extras
+## Extras
   
-  - Todas las clases tienen controladas las **excepciones**, y mas concretamente las 404.
-  - Se podran realizar pruebas con el programa **postman** y la **coleccion** que esta añadida al proyecto.
-  - Cuenta con un codigo que genera el **log** de practicamente todas las operaciones y metodos del proyecto.
+- Todas las clases tienen controladas las **excepciones**, y mas concretamente las 404.
+- Se podran realizar pruebas con el programa **postman** y la **coleccion** que esta añadida al proyecto.
+- Cuenta con un codigo que genera el **log** de practicamente todas las operaciones y metodos del proyecto.
