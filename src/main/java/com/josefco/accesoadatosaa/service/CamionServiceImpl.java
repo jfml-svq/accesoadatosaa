@@ -61,6 +61,11 @@ public class CamionServiceImpl implements CamionService {
         return camionRepository.save(newCamion);
     }
 
+    @Override
+    public List<Camion> findCamionesByMarca(String marca) throws CamionNoEncontradoException {
+        return camionRepository.findCamionesByMarca(marca);
+    }
+
     /*@Override
     public Camion saveCamion(Camion camion) {
 

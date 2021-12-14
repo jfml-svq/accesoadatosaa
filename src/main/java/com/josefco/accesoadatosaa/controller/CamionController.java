@@ -64,6 +64,16 @@ public class CamionController {
         return newCamion;
     }
 
+    @RequestMapping(value = "/camiones/marca/{marca}")
+    public List<Camion> findCamionesByMarca(@PathVariable String marca) throws CamionNoEncontradoException {
+        logger.info("begin findCamionesByMarca");
+        List<Camion> camiones = camionService.findCamionesByMarca(marca);
+        logger.info("end findCamionesByMarca");
+        return camiones;
+    }
+
+
+
     @ExceptionHandler(CamionNoEncontradoException.class)
     public ResponseEntity<RespuestaError> handleCamionNoEncontradoException(CamionNoEncontradoException cnee) {
         RespuestaError errorResponse = new RespuestaError("1", cnee.getMessage());

@@ -32,6 +32,15 @@ public class PaqueteController {
         return paquetes;
     }
 
+    //Filtro de un parametro
+    @RequestMapping("/paquetes/color/{color}")
+    public List<Paquete> findPaqueteByColor(@PathVariable String color) throws PaqueteNoEncontradoException {
+        logger.info("begin findPaqueteByColor");
+        List<Paquete> paquetes = paqueteService.findPaqueteByColor(color);
+        logger.info("end findPaqueteByColor");
+        return paquetes;
+    }
+
     @GetMapping("/paquete/{id}")
     public Paquete findPaquete(@PathVariable int id) throws PaqueteNoEncontradoException {
         logger.info("begin findPaquete by id "+id);
@@ -68,6 +77,7 @@ public class PaqueteController {
         return newPaquete;
     }
 
+    //Codigo para controlar las excepciones de los paquetes
     @ExceptionHandler(PaqueteNoEncontradoException.class)
     public ResponseEntity<RespuestaError> handlePaqueteNoEncontradoException(PaqueteNoEncontradoException pnee) {
         RespuestaError errorResponse = new RespuestaError("1", pnee.getMessage());

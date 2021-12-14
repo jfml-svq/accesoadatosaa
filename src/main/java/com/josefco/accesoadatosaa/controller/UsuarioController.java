@@ -30,6 +30,14 @@ public class UsuarioController {
         return usuarios;
     }
 
+    @RequestMapping(value = "/usuarios/direccion/{direccion}")
+    public List<Usuario> findUsuariosByDireccion(@PathVariable String direccion) throws UsuarioNoEncontradoException {
+        logger.info("begin findUsuariosFilter");
+        List<Usuario> usuarios = usuarioService.findUsuariosByDireccion(direccion);
+        logger.info("end findUsuariosFilter");
+        return usuarios;
+    }
+
     @GetMapping("/usuario/{id}")
     public Usuario getUsuario(@PathVariable int id) throws UsuarioNoEncontradoException {
         logger.info("begin getUsuario");

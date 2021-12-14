@@ -71,4 +71,11 @@ public class PaqueteServiceImpl implements PaqueteService {
 
         return paqueteRepository.save(paquete);
     }
+
+    @Override
+    public List<Paquete> findPaqueteByColor(String color) throws PaqueteNoEncontradoException{
+        return paqueteRepository.findPaqueteByColor(color) ;
+    }
+
+
 }

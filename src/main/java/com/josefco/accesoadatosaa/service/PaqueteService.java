@@ -15,4 +15,6 @@ public interface PaqueteService {
     Paquete addPaquete(PaquetDTO paquetDTO) throws Exception;
     Paquete deletePaquete(int id) throws PaqueteNoEncontradoException;
     Paquete modifyPaquete(int id, Paquete Paquete) throws PaqueteNoEncontradoException;
+
+    List<Paquete> findPaqueteByColor(String color) throws PaqueteNoEncontradoException;
 }

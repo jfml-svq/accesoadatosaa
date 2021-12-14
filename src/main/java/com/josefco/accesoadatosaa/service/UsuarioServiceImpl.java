@@ -25,7 +25,6 @@ public class UsuarioServiceImpl implements UsuarioService {
         return usuarioRepository.findById(id).orElseThrow(UsuarioNoEncontradoException::new);
     }
 
-
     @Override
     public Usuario addUsuario(Usuario Usuario) {
         return usuarioRepository.save(Usuario);
@@ -49,4 +48,10 @@ public class UsuarioServiceImpl implements UsuarioService {
 
         return usuarioRepository.save(usuario);
     }
+
+    @Override
+    public List<Usuario> findUsuariosByDireccion(String direccion) throws UsuarioNoEncontradoException {
+            return usuarioRepository.findUsuariosByDireccion(direccion);
+    }
+
 }
