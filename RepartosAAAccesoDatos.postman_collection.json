@@ -1,0 +1,577 @@
+{
+	"info": {
+		"_postman_id": "f82a7cda-9923-4e79-8855-2848ff78a54f",
+		"name": "RepartosAAAccesoDatos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Camion",
+			"item": [
+				{
+					"name": "getAllCamiones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/camiones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"camiones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCamionPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/camion/1335",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"camion",
+								"1335"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveCamion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matricula\":\"8888ggg\",\r\n    \"modelo\":\"xzara\",\r\n    \"marca\":\"citroen\",\r\n    \"gasolina\":0,\r\n    \"conductores\":[\r\n       \r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/camiones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"camiones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCamion",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/camion/193",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"camion",
+								"193"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCamion",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matricula\":\"9898trt\",\r\n    \"modelo\":\"laguna\",\r\n    \"marca\":\"renault\",\r\n    \"gasolina\":110,\r\n    \"conductores\":[\r\n       {\"id\":1},\r\n       {\"id\":258}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/camion/161",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"camion",
+								"161"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCamionesByMarca",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/camiones/marca/renault",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"camiones",
+								"marca",
+								"renault"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "getUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsuarioPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"pepito\",\r\n    \"apellido\": \"pepe\",\r\n    \"telefono\": \"989898895\",\r\n    \"direccion\": \"cadiz\",\r\n    \"fechaReg\": \"12-12-1990\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"laura\",\r\n    \"apellido\": \"perez\",\r\n    \"telefono\": \"698563215\",\r\n    \"direccion\": \"Granada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuario/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsuarioByDireccion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/direccion/sevilla",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"direccion",
+								"sevilla"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Paquete",
+			"item": [
+				{
+					"name": "getPaquetes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/paquetes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paquetes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaquetePorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/paquete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paquete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePaquete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/paquete/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paquete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePaquete",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"laura\",\r\n    \"apellido\": \"perez\",\r\n    \"telefono\": \"698563215\",\r\n    \"direccion\": \"Granada\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/paquete/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paquete",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "savePaquete2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ancho\": 10,\r\n    \"largo\": 10,\r\n    \"alto\": 10,\r\n    \"peso\": 10,\r\n    \"color\": \"verde\",\r\n    \"fecha\": \"12-12-1990\",\r\n    \"usuario\":1,\r\n    \"conductor\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/paquete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paquete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPaquetesByColor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/paquetes/color/verde",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"paquetes",
+								"color",
+								"verde"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Conductor",
+			"item": [
+				{
+					"name": "getConductores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conductores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conductores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getConductorPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conductor/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conductor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveConductor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n    \"nombre\": \"nuevo\",\r\n    \"apellido\": \"nuevo\",\r\n    \"telefono\": \"98989898\",\r\n    \"direccion\": \"nuevo\",\r\n    \"camiones\":[\r\n       {\"id\":161}\r\n    ]\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/conductores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conductores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteConductor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conductor/258",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conductor",
+								"258"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateConductor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{     \r\n    \"nombre\": \"nuevo\",\r\n    \"apellido\": \"nuevo\",\r\n    \"telefono\": \"00000000\",\r\n    \"direccion\": \"nuevo\",\r\n    \"camiones\":[],\r\n    \"paquetes\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/conductor/321",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conductor",
+								"321"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getConductorByDireccion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/conductores/direccion/sevilla",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"conductores",
+								"direccion",
+								"sevilla"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
