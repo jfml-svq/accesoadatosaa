@@ -24,3 +24,7 @@ Creacion del para una api de paqueteria.
 - Todas las clases tienen controladas las **excepciones**, y mas concretamente las 404.
 - Se podran realizar pruebas con el programa **postman** y la **coleccion** que esta añadida al proyecto.
 - Cuenta con un codigo que genera el **log** de practicamente todas las operaciones y metodos del proyecto.
+- Filtrado cada clase por un parametro.
+  - Usuario y conductor por direccion.
+  - Paquete por color.
+  - Camiones por marca.
