@@ -28,3 +28,5 @@ Creacion del para una api de paqueteria.
   - Usuario y conductor por direccion.
   - Paquete por color.
   - Camiones por marca.
+- Filtrado de Paquetes por tamaños.
+- SQL Y JPQL en varios repositorios.
