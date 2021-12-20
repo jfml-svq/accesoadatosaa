@@ -164,6 +164,27 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getCamionesByMarca",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/camiones/marca/renault",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"camiones",
+								"marca",
+								"renault"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -292,7 +313,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
+<<<<<<< HEAD:RepartosAAAccesoDatosLast.postman_collection.json
 							"raw": "http://localhost:8080/usuarios/direccion/cadiz",
+=======
+							"raw": "http://localhost:8080/usuarios/direccion/sevilla",
+>>>>>>> 947d9ca62422889a95b8b30a84c2bcdce26cebcd:RepartosAAAccesoDatos.postman_collection.json
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -301,11 +326,16 @@
 							"path": [
 								"usuarios",
 								"direccion",
+<<<<<<< HEAD:RepartosAAAccesoDatosLast.postman_collection.json
 								"cadiz"
+=======
+								"sevilla"
+>>>>>>> 947d9ca62422889a95b8b30a84c2bcdce26cebcd:RepartosAAAccesoDatos.postman_collection.json
 							]
 						}
 					},
 					"response": []
+<<<<<<< HEAD:RepartosAAAccesoDatosLast.postman_collection.json
 				},
 				{
 					"name": "SQLCountAllUsers",
@@ -315,6 +345,8 @@
 						"url": null
 					},
 					"response": []
+=======
+>>>>>>> 947d9ca62422889a95b8b30a84c2bcdce26cebcd:RepartosAAAccesoDatos.postman_collection.json
 				}
 			]
 		},
@@ -457,6 +489,7 @@
 						}
 					},
 					"response": []
+<<<<<<< HEAD:RepartosAAAccesoDatosLast.postman_collection.json
 				},
 				{
 					"name": "SQLCountAllPaquetes",
@@ -536,6 +569,8 @@
 						}
 					},
 					"response": []
+=======
+>>>>>>> 947d9ca62422889a95b8b30a84c2bcdce26cebcd:RepartosAAAccesoDatos.postman_collection.json
 				}
 			]
 		},
