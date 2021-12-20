@@ -70,6 +70,14 @@ public class UsuarioController {
         return newUsuario;
     }
 
+    @GetMapping("/usuarios/contador")
+    public int countUsuario(){
+        logger.info("start countUsuario");
+        int contador = usuarioService.countUsuario();
+        logger.info("end countUsuario");
+        return contador;
+    }
+
     @ExceptionHandler(UsuarioNoEncontradoException.class)
     public ResponseEntity<RespuestaError> handleUsuarioNoEncontradoException(UsuarioNoEncontradoException unee) {
         RespuestaError errorResponse = new RespuestaError("1", unee.getMessage());

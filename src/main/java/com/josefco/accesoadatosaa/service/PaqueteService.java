@@ -1,6 +1,6 @@
 package com.josefco.accesoadatosaa.service;
 
-import com.josefco.accesoadatosaa.domain.PaquetDTO;
+import com.josefco.accesoadatosaa.domain.dto.PaquetDTO;
 import com.josefco.accesoadatosaa.domain.Paquete;
 import com.josefco.accesoadatosaa.exception.PaqueteNoEncontradoException;
 
@@ -17,4 +17,11 @@ public interface PaqueteService {
     Paquete modifyPaquete(int id, Paquete Paquete) throws PaqueteNoEncontradoException;
 
     List<Paquete> findPaqueteByColor(String color) throws PaqueteNoEncontradoException;
+
+    int countPaquete();
+
+
+    List<Paquete> getPaqueteExtraPriceByPeso(int peso);
+
+    List<Paquete> getPaquetesFilter(int ancho, int alto, int largo) throws PaqueteNoEncontradoException;
 }

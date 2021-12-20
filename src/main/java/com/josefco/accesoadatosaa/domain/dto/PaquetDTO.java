@@ -1,4 +1,4 @@
-package com.josefco.accesoadatosaa.domain;
+package com.josefco.accesoadatosaa.domain.dto;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;

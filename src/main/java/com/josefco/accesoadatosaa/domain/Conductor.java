@@ -12,7 +12,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "Conductor")
+@Entity(name = "conductores")
 public class Conductor {
 
     @Id

@@ -15,4 +15,6 @@ public interface CamionService {
     Camion saveCamion(Camion camion);
 
     List<Camion> findCamionesByMarca(String marca) throws CamionNoEncontradoException;
+
+    int countCamiones();
 }

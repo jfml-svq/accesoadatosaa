@@ -72,6 +72,14 @@ public class CamionController {
         return camiones;
     }
 
+    @GetMapping("camiones/contador")
+    public int countCamiones(){
+        logger.info("start countCamiones");
+        int contador = camionService.countCamiones();
+        logger.info("end countCamiones");
+        return contador;
+    }
+
 
 
     @ExceptionHandler(CamionNoEncontradoException.class)

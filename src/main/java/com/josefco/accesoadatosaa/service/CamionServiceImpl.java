@@ -66,6 +66,11 @@ public class CamionServiceImpl implements CamionService {
         return camionRepository.findCamionesByMarca(marca);
     }
 
+    @Override
+    public int countCamiones() {
+        return camionRepository.countCamiones();
+    }
+
     /*@Override
     public Camion saveCamion(Camion camion) {
 

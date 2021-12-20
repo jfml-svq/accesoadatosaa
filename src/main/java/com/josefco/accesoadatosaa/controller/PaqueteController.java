@@ -1,6 +1,6 @@
 package com.josefco.accesoadatosaa.controller;
 
-import com.josefco.accesoadatosaa.domain.PaquetDTO;
+import com.josefco.accesoadatosaa.domain.dto.PaquetDTO;
 import com.josefco.accesoadatosaa.domain.Paquete;
 import com.josefco.accesoadatosaa.exception.PaqueteNoEncontradoException;
 import com.josefco.accesoadatosaa.exception.RespuestaError;
@@ -76,6 +76,33 @@ public class PaqueteController {
         logger.info("end modifyPaquete by id " +id);
         return newPaquete;
     }
+
+    @GetMapping("/paquetes/contador")
+    public int countPaquete(){
+        logger.info("start countPaquete");
+        int contador = paqueteService.countPaquete();
+        logger.info("end countPaquete");
+        return contador;
+    }
+
+
+    @GetMapping("/paquete_extra_price_weight")
+    public List<Paquete> getPaqueteExtraPriceByPeso(int peso){
+        logger.info("start getPaqueteExtraPriceByPeso");
+        List<Paquete> paquetes = paqueteService.getPaqueteExtraPriceByPeso(peso);
+        logger.info("end getPaqueteExtraPriceByPeso");
+        return paquetes;
+    }
+
+    @GetMapping("/paquete/filter")
+    public List<Paquete> getPaquetesFilter(int ancho, int alto, int largo) throws PaqueteNoEncontradoException{
+        logger.info("start getPaquetesFilter");
+        List<Paquete> paquetes = paqueteService.getPaquetesFilter(ancho, alto, largo);
+        logger.info("end getPaquetesFilter");
+        return paquetes;
+    }
+
+
 
     //Codigo para controlar las excepciones de los paquetes
     @ExceptionHandler(PaqueteNoEncontradoException.class)

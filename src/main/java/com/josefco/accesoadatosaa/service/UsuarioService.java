@@ -16,4 +16,7 @@ public interface UsuarioService {
     Usuario modifyUsuario(int id, Usuario Usuario) throws UsuarioNoEncontradoException;
 
     List<Usuario> findUsuariosByDireccion(String direccion) throws UsuarioNoEncontradoException;
+
+    int countUsuario();
+
 }

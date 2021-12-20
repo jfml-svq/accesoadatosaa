@@ -2,7 +2,7 @@ package com.josefco.accesoadatosaa.service;
 
 
 import com.josefco.accesoadatosaa.domain.Conductor;
-import com.josefco.accesoadatosaa.domain.PaquetDTO;
+import com.josefco.accesoadatosaa.domain.dto.PaquetDTO;
 import com.josefco.accesoadatosaa.domain.Paquete;
 import com.josefco.accesoadatosaa.domain.Usuario;
 import com.josefco.accesoadatosaa.exception.PaqueteNoEncontradoException;
@@ -77,5 +77,21 @@ public class PaqueteServiceImpl implements PaqueteService {
         return paqueteRepository.findPaqueteByColor(color) ;
     }
 
+    @Override
+    public int countPaquete() {
+        return paqueteRepository.countPaquetes();
+    }
+
+
+
+    @Override
+    public List<Paquete> getPaqueteExtraPriceByPeso(int peso) {
+        return paqueteRepository.getPaqueteExtraPriceByPeso(peso);
+    }
+
+    @Override
+    public List<Paquete> getPaquetesFilter(int ancho, int alto, int largo) throws PaqueteNoEncontradoException {
+        return paqueteRepository.getPaquetesFilter(ancho, alto, largo);
+    }
 
 }

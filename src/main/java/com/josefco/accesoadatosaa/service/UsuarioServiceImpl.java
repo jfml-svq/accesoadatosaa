@@ -54,4 +54,9 @@ public class UsuarioServiceImpl implements UsuarioService {
             return usuarioRepository.findUsuariosByDireccion(direccion);
     }
 
+    @Override
+    public int countUsuario() {
+        return usuarioRepository.countUsuarios();
+    }
+
 }
