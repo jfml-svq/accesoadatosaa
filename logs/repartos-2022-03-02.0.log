@@ -1,0 +1,94 @@
+2022-03-02 18:34:17,937 INFO org.springframework.boot.StartupInfoLogger [main] Starting AccesoadatosaaApplication using Java 11.0.11 on DESKTOP-BU39U52 with PID 18788 (E:\Asignaturas\2SegundoCurso\AA1EvPara entregar\Api\accesoadatosaa\target\classes started by Jose in E:\Asignaturas\2SegundoCurso\AA1EvPara entregar\Api\accesoadatosaa)
+2022-03-02 18:34:17,941 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 18:34:18,575 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-02 18:34:18,644 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 60 ms. Found 4 JPA repository interfaces.
+2022-03-02 18:34:19,423 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-03-02 18:34:19,443 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-02 18:34:19,443 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-03-02 18:34:19,444 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-03-02 18:34:19,533 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-03-02 18:34:19,533 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1544 ms
+2022-03-02 18:34:19,562 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-03-02 18:34:19,795 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-03-02 18:34:19,800 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:C:/Users/Jose/repartos.db'
+2022-03-02 18:34:19,950 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-02 18:34:19,986 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-03-02 18:34:20,082 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-02 18:34:20,168 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-02 18:34:20,744 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-02 18:34:20,753 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-02 18:34:21,198 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-02 18:34:21,475 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-03-02 18:34:21,496 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 18:34:21,507 INFO org.springframework.boot.StartupInfoLogger [main] Started AccesoadatosaaApplication in 3.97 seconds (JVM running for 4.572)
+2022-03-02 18:37:07,228 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 18:37:07,229 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-03-02 18:37:07,230 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2022-03-02 18:37:07,275 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-1] begin getUsuarios
+2022-03-02 18:37:07,335 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-1] end getUsuarios
+2022-03-02 18:37:13,472 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-3] begin getUsuarios
+2022-03-02 18:37:13,475 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-3] end getUsuarios
+2022-03-02 18:37:43,234 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-4] begin getUsuarios
+2022-03-02 18:37:43,237 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-4] end getUsuarios
+2022-03-02 18:37:46,046 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-5] begin getUsuarios
+2022-03-02 18:37:46,048 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-5] end getUsuarios
+2022-03-02 18:37:50,906 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-6] begin getUsuarios
+2022-03-02 18:37:50,908 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-6] end getUsuarios
+2022-03-02 18:37:59,065 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-7] begin getUsuarios
+2022-03-02 18:37:59,068 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-7] end getUsuarios
+2022-03-02 18:38:42,508 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-8] begin getUsuarios
+2022-03-02 18:38:42,510 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-8] end getUsuarios
+2022-03-02 18:38:48,390 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-9] begin getUsuarios
+2022-03-02 18:38:48,392 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-9] end getUsuarios
+2022-03-02 18:39:15,744 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-10] begin getUsuarios
+2022-03-02 18:39:15,745 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-10] end getUsuarios
+2022-03-02 18:39:21,056 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-2] begin getUsuarios
+2022-03-02 18:39:21,059 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-2] end getUsuarios
+2022-03-02 18:40:08,566 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-1] begin getUsuarios
+2022-03-02 18:40:08,568 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-1] end getUsuarios
+2022-03-02 18:40:16,299 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-3] begin getUsuarios
+2022-03-02 18:40:16,301 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-3] end getUsuarios
+2022-03-02 18:40:34,869 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-4] begin addUsuario
+2022-03-02 18:40:34,902 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-4] end addUsuario
+2022-03-02 18:40:38,790 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-5] begin getUsuarios
+2022-03-02 18:40:38,792 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-5] end getUsuarios
+2022-03-02 18:40:45,136 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-6] begin getUsuarios
+2022-03-02 18:40:45,137 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-6] end getUsuarios
+2022-03-02 18:40:55,494 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-7] begin getUsuarios
+2022-03-02 18:40:55,498 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-7] end getUsuarios
+2022-03-02 18:47:38,135 INFO org.springframework.boot.StartupInfoLogger [main] Starting AccesoadatosaaApplication using Java 11.0.11 on DESKTOP-BU39U52 with PID 5576 (E:\Asignaturas\2SegundoCurso\AA1EvPara entregar\Api\accesoadatosaa\target\classes started by Jose in E:\Asignaturas\2SegundoCurso\AA1EvPara entregar\Api\accesoadatosaa)
+2022-03-02 18:47:38,138 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-03-02 18:47:38,853 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-02 18:47:38,941 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2022-03-02 18:47:39,652 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2022-03-02 18:47:39,672 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2022-03-02 18:47:39,673 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-03-02 18:47:39,673 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.54]
+2022-03-02 18:47:39,800 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-03-02 18:47:39,801 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1612 ms
+2022-03-02 18:47:39,830 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2022-03-02 18:47:40,037 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2022-03-02 18:47:40,045 INFO org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:C:/Users/Jose/repartos.db'
+2022-03-02 18:47:40,203 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-02 18:47:40,237 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-03-02 18:47:40,333 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-02 18:47:40,451 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-02 18:47:41,035 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-02 18:47:41,043 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-02 18:47:41,467 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-02 18:47:41,781 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2022-03-02 18:47:41,801 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-02 18:47:41,810 INFO org.springframework.boot.StartupInfoLogger [main] Started AccesoadatosaaApplication in 4.058 seconds (JVM running for 4.69)
+2022-03-02 18:47:50,376 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-02 18:47:50,377 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-03-02 18:47:50,378 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2022-03-02 18:47:50,416 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-1] begin getUsuarios
+2022-03-02 18:47:50,503 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-1] end getUsuarios
+2022-03-02 18:48:05,005 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-3] begin getUsuarios
+2022-03-02 18:48:05,023 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-3] end getUsuarios
+2022-03-02 18:48:12,384 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-4] begin getUsuarios
+2022-03-02 18:48:12,387 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-4] end getUsuarios
+2022-03-02 18:48:21,797 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-5] begin getUsuarios
+2022-03-02 18:48:21,805 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-5] end getUsuarios
+2022-03-02 18:48:26,590 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-6] begin getUsuarios
+2022-03-02 18:48:26,592 INFO com.josefco.accesoadatosaa.controller.UsuarioController [http-nio-8080-exec-6] end getUsuarios

@@ -21,12 +21,30 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    @GetMapping("/usuarios")
+    /*@GetMapping("/usuarios")
     public List<Usuario> findAllUsuarios() {
         logger.info("begin findAllUsuarios");
         List<Usuario> usuarios;
-        usuarios =  usuarioService.findAllUsuarios();
+        usuarios =  usuarioService.findAll();
         logger.info("end findAllUsuarios");
+        return usuarios;
+    }*/
+
+    @GetMapping("/usuarios")
+    public List<Usuario> getUsuarios(
+            @RequestParam(name = "nombre", required = false) String nombre,
+            @RequestParam(name = "apellido", required = false) String apellido,
+            @RequestParam(name = "direccion", required = false) String direccion,
+            @RequestParam(name = "all", defaultValue = "true") boolean all) throws UsuarioNoEncontradoException{
+        logger.info("begin getUsuarios");
+        List<Usuario> usuarios;
+
+        if(all){
+            usuarios = usuarioService.findAll();
+        } else {
+            usuarios = usuarioService.findAllByFilters(nombre, apellido, direccion);
+        }
+        logger.info("end getUsuarios");
         return usuarios;
     }
 

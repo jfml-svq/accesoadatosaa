@@ -8,7 +8,8 @@ import java.util.List;
 
 public interface UsuarioService {
 
-    List<Usuario> findAllUsuarios();
+    List<Usuario> findAll() throws UsuarioNoEncontradoException;
+    List<Usuario> findAllByFilters(String nombre, String apellido, String direccion) throws UsuarioNoEncontradoException;
     Usuario findUsuario(int id) throws UsuarioNoEncontradoException;
 
     Usuario addUsuario(Usuario Usuario);
