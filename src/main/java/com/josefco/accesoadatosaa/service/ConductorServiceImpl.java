@@ -73,4 +73,12 @@ public class ConductorServiceImpl implements ConductorService {
         return conductorRepository.save(newConductor);
     }
 
+    @Override
+    public void addAsignacion(Conductor conductor, Camion camion) {
+        conductor.getCamiones().add(camion);
+        camion.getConductores().add(conductor);
+        camionRepository.save(camion);
+        conductorRepository.save(conductor);
+    }
+
 }

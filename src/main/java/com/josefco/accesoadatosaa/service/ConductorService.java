@@ -1,5 +1,6 @@
 package com.josefco.accesoadatosaa.service;
 
+import com.josefco.accesoadatosaa.domain.Camion;
 import com.josefco.accesoadatosaa.domain.Conductor;
 import com.josefco.accesoadatosaa.exception.ConductorNoEncontradoException;
 
@@ -15,4 +16,6 @@ public interface ConductorService {
     List<Conductor> findConductorByDireccion(String direccion) throws ConductorNoEncontradoException;
 
     Conductor saveConductor(Conductor conductor);
+
+    void addAsignacion(Conductor conductor, Camion camion);
 }

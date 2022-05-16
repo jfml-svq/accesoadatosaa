@@ -1,8 +1,13 @@
 package com.josefco.accesoadatosaa.controller;
 
+import com.josefco.accesoadatosaa.domain.Camion;
 import com.josefco.accesoadatosaa.domain.Conductor;
+import com.josefco.accesoadatosaa.domain.dto.AsignacionDTO;
+import com.josefco.accesoadatosaa.exception.CamionNoEncontradoException;
 import com.josefco.accesoadatosaa.exception.ConductorNoEncontradoException;
+import com.josefco.accesoadatosaa.exception.Respuesta;
 import com.josefco.accesoadatosaa.exception.RespuestaError;
+import com.josefco.accesoadatosaa.service.CamionService;
 import com.josefco.accesoadatosaa.service.ConductorService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +25,9 @@ public class ConductorController {
 
     @Autowired
     private ConductorService conductorService;
+
+    @Autowired
+    private CamionService camionService;
 
     @GetMapping("/conductores")
     public List<Conductor> findAllConductores() {
@@ -69,6 +77,18 @@ public class ConductorController {
         List<Conductor> conductores = conductorService.findConductorByDireccion(direccion);
         logger.info("end findConductorByDireccion");
         return conductores;
+    }
+
+    @PostMapping("/asignacion")
+    public Respuesta asignacion(@RequestBody AsignacionDTO asignacionDTO)
+            throws CamionNoEncontradoException, ConductorNoEncontradoException {
+        Camion camion = camionService.findCamion(asignacionDTO.getIdCamion());
+        Conductor conductor = conductorService.findConductor(asignacionDTO.getIdConductor());
+        conductorService.addAsignacion(conductor, camion);
+
+        Respuesta respuesta = new Respuesta("105", "Asignacion definida: Conductor id: "
+                + conductor.getId() + " + con camion " + camion.getMatricula());
+        return respuesta;
     }
 
     @ExceptionHandler(ConductorNoEncontradoException.class)

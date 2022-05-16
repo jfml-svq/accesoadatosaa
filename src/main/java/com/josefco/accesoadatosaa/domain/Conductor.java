@@ -1,9 +1,7 @@
 package com.josefco.accesoadatosaa.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,7 +9,7 @@ import java.util.List;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 @Entity(name = "conductores")
 public class Conductor {
 
@@ -27,29 +25,14 @@ public class Conductor {
     @Column
     private String direccion;
 
-    /*@OneToOne
-    @JoinColumn(name = "id_camion")
-    @JsonBackReference(value = "conductor-camion")
-    private Camion camion;*/
-
-
     @OneToMany(mappedBy = "conductor")
     private List<Paquete> paquetes;
 
 
-    @JsonBackReference
-    @ManyToMany(mappedBy="conductores")
-    private List<Camion> camiones=new ArrayList<>();
+    @ManyToMany //(mappedBy = "conductores")
+    private List<Camion> camiones;
 
-    public Conductor(List<Camion> camiones) {
-        this.camiones = camiones;
+    public Conductor (){
+        camiones = new ArrayList<>();
     }
-
-    /*public List<Camion> getCamiones() {
-        return camiones;
-    }
-
-    public void setCamiones(List<Camion> camiones) {
-        this.camiones = camiones;
-    }*/
 }
